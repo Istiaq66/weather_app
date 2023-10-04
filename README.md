@@ -1,16 +1,17 @@
 # weather_app
 
-A new Flutter project.
+I created this project to learn bloc pattern
 
-## Getting Started
+## Dependencies used here-->
 
-This project is a starting point for a Flutter application.
+  equatable: ^2.0.5
+  intl: ^0.18.1
+  flutter_bloc: ^8.1.3
+  weather: ^3.1.1
+  geolocator: ^10.1.0
 
-A few resources to get you started if this is your first Flutter project:
+## Project Demo
+ 
+| ![Image 1](assets\sample1.jpg) |
+|:----------------------:|
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
