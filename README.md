@@ -1,14 +1,14 @@
 # weather_app
 
-I created this project to learn bloc pattern
+I created this project to learn bloc pattern. I have used openweather api to get weather informations.
 
 ## Dependencies used here-->
 
-  equatable: ^2.0.5
-  intl: ^0.18.1
-  flutter_bloc: ^8.1.3
-  weather: ^3.1.1
-  geolocator: ^10.1.0
+  equatable: ^2.0.5<br>
+  intl: ^0.18.1<br>
+  flutter_bloc: ^8.1.3<br>  
+  weather: ^3.1.1<br>
+  geolocator: ^10.1.0<br>
 
 ## Project Demo
  
