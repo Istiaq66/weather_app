@@ -12,6 +12,6 @@ I created this project to learn bloc pattern. I have used openweather api to get
 
 ## Project Demo
  
-| ![Image 1](assets\sample1.jpg) |
+| ![Image 1](https://github.com/Istiaq66/weather_app/blob/main/assets/sample1.jpg) |
 |:----------------------:|
 
