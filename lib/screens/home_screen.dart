@@ -120,7 +120,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   decoration: BoxDecoration(color: Colors.transparent),
                 ),
               ),
-              BlocBuilder<WeatherBlocBloc, WeatherBlocState>(
+              BlocConsumer<WeatherBlocBloc, WeatherBlocState>(
+                listener: (context, state) {
+                  if (state is WeatherBlocSuccess) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Success"),
+                      backgroundColor: Colors.green,
+                      duration: Duration(milliseconds: 200),
+                    ));
+                  } else if (state is WeatherBlocFailure) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Error"),
+                      backgroundColor: Colors.red,
+                      duration: Duration(milliseconds: 200),
+                    ));
+                  }
+                },
                 builder: (context, state) {
                   if (state is WeatherBlocSuccess) {
                     return SizedBox(

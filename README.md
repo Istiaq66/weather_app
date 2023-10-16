@@ -6,7 +6,7 @@ I created this project to learn bloc pattern. I have used openweather api to get
 
   equatable: ^2.0.5<br>
   intl: ^0.18.1<br>
-  flutter_bloc: ^8.1.3<br>  
+  flutter_bloc: ^8.1.3<br> 
   weather: ^3.1.1<br>
   geolocator: ^10.1.0<br>
 
