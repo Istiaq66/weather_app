@@ -126,13 +126,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text("Success"),
                       backgroundColor: Colors.green,
-                      duration: Duration(milliseconds: 200),
+                      
                     ));
                   } else if (state is WeatherBlocFailure) {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text("Error"),
                       backgroundColor: Colors.red,
-                      duration: Duration(milliseconds: 200),
+                  
                     ));
                   }
                 },

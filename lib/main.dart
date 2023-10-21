@@ -18,12 +18,33 @@ class MyApp extends StatelessWidget {
         home: FutureBuilder(
             future: _determinePosition(),
             builder: (context, snap) {
-              if (snap.hasData) {
-                return BlocProvider<WeatherBlocBloc>(
-                  create: (context) => WeatherBlocBloc()
-                    ..add(FetchWeather(snap.data as Position)),
-                  child: const HomeScreen(),
-                );
+              if (snap.connectionState == ConnectionState.done) {
+                if (snap.hasError) {
+                  // Handle errors, e.g., display a message to the user.
+                  return Scaffold(
+                    body: Center(
+                      child: Text(
+                        '${snap.error}',
+                        style: const TextStyle(
+                          color: Colors.red,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  );
+                } else if (snap.hasData) {
+                  return BlocProvider<WeatherBlocBloc>(
+                    create: (context) => WeatherBlocBloc()
+                      ..add(FetchWeather(snap.data as Position)),
+                    child: const HomeScreen(),
+                  );
+                } else {
+                  return const Scaffold(
+                    body: Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                  );
+                }
               } else {
                 return const Scaffold(
                   body: Center(
